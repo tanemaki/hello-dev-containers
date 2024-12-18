@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "invoke>=2.2.0",
+    "ipykernel>=6.29.5",
 ]
 
 [build-system]
