@@ -1,5 +1,6 @@
 FROM debian:bookworm-slim
 USER root
+WORKDIR /workspace
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -25,6 +26,4 @@ COPY .devcontainer/.bashrc /root/.bashrc
 
 RUN git config --global --add safe.directory /workspace
 
-ADD . /workspace
-WORKDIR /workspace
-RUN uv sync --frozen
+COPY . /workspace/

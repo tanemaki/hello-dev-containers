@@ -8,8 +8,6 @@
             "extensions": [
                 "mhutchie.git-graph",
                 "charliermarsh.ruff",
-                "ms-python.black-formatter",
-                "Gruntfuggly.todo-tree",
                 "ms-toolsai.jupyter",
                 "DavidAnson.vscode-markdownlint",
                 "ms-azuretools.vscode-docker"
@@ -32,5 +30,6 @@
                 }
             }
         }
-    }
+    },
+    "postCreateCommand": "chmod +x .devcontainer/postCreateCommand.sh && .devcontainer/postCreateCommand.sh"
 }
